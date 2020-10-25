@@ -6,14 +6,21 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import GoogleSignIn
 
 @main
 struct TriageApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        FirebaseApp.configure()
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
+        return WindowGroup {
+            
+            LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
