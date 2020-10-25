@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D340E51252A048F00740973 /* TriageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D340E50252A048F00740973 /* TriageApp.swift */; };
-		5D340E53252A048F00740973 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D340E52252A048F00740973 /* ContentView.swift */; };
+		5D340E53252A048F00740973 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D340E52252A048F00740973 /* LoginView.swift */; };
 		5D340E55252A049000740973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D340E54252A049000740973 /* Assets.xcassets */; };
 		5D340E58252A049000740973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D340E57252A049000740973 /* Preview Assets.xcassets */; };
 		5D340E5A252A049000740973 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D340E59252A049000740973 /* Persistence.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		5D340E4D252A048F00740973 /* Triage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Triage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D340E50252A048F00740973 /* TriageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriageApp.swift; sourceTree = "<group>"; };
-		5D340E52252A048F00740973 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5D340E52252A048F00740973 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5D340E54252A049000740973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D340E57252A049000740973 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D340E59252A049000740973 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			children = (
 				5D340E80252A4D6C00740973 /* auth */,
 				5D340E50252A048F00740973 /* TriageApp.swift */,
-				5D340E52252A048F00740973 /* ContentView.swift */,
+				5D340E52252A048F00740973 /* LoginView.swift */,
 				5D340E54252A049000740973 /* Assets.xcassets */,
 				5D340E59252A049000740973 /* Persistence.swift */,
 				5DFC07BE253AFB6000DAEA2A /* GoogleService-Info.plist */,
@@ -250,7 +250,7 @@
 			files = (
 				5DFC07C2253AFDF500DAEA2A /* FirebaseUtils.swift in Sources */,
 				5D340E5A252A049000740973 /* Persistence.swift in Sources */,
-				5D340E53252A048F00740973 /* ContentView.swift in Sources */,
+				5D340E53252A048F00740973 /* LoginView.swift in Sources */,
 				5D340E51252A048F00740973 /* TriageApp.swift in Sources */,
 				5D340E5D252A049000740973 /* Triage.xcdatamodeld in Sources */,
 				5D340E82252A4DE100740973 /* GoogleAuthRepresentable.swift in Sources */,
