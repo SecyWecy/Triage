@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		5D340E58252A049000740973 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D340E57252A049000740973 /* Preview Assets.xcassets */; };
 		5D340E5A252A049000740973 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D340E59252A049000740973 /* Persistence.swift */; };
 		5D340E5D252A049000740973 /* Triage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D340E5B252A049000740973 /* Triage.xcdatamodeld */; };
+		5D340E82252A4DE100740973 /* GoogleAuthRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D340E81252A4DE100740973 /* GoogleAuthRepresentable.swift */; };
+		5DFC07BF253AFB6000DAEA2A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DFC07BE253AFB6000DAEA2A /* GoogleService-Info.plist */; };
+		5DFC07C2253AFDF500DAEA2A /* FirebaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFC07C1253AFDF500DAEA2A /* FirebaseUtils.swift */; };
+		CA79297EF94C226A984BB454 /* Pods_Triage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E372FB978EDA2C715F85EC12 /* Pods_Triage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		5D340E59252A049000740973 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5D340E5C252A049000740973 /* Triage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Triage.xcdatamodel; sourceTree = "<group>"; };
 		5D340E5E252A049000740973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D340E81252A4DE100740973 /* GoogleAuthRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthRepresentable.swift; sourceTree = "<group>"; };
+		5DFC07BE253AFB6000DAEA2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5DFC07C1253AFDF500DAEA2A /* FirebaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtils.swift; sourceTree = "<group>"; };
+		9F38D2183B2BDDF2F582440E /* Pods-Triage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triage.debug.xcconfig"; path = "Target Support Files/Pods-Triage/Pods-Triage.debug.xcconfig"; sourceTree = "<group>"; };
+		D1309E02BD390D30D1084D23 /* Pods-Triage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Triage.release.xcconfig"; path = "Target Support Files/Pods-Triage/Pods-Triage.release.xcconfig"; sourceTree = "<group>"; };
+		E372FB978EDA2C715F85EC12 /* Pods_Triage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Triage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA79297EF94C226A984BB454 /* Pods_Triage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50CF13E7F35C68B1CD131B77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E372FB978EDA2C715F85EC12 /* Pods_Triage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D340E44252A048F00740973 = {
 			isa = PBXGroup;
 			children = (
 				5D340E4F252A048F00740973 /* Triage */,
 				5D340E4E252A048F00740973 /* Products */,
+				E33D7244B719D0286A0AC0E4 /* Pods */,
+				50CF13E7F35C68B1CD131B77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +77,16 @@
 		5D340E4F252A048F00740973 /* Triage */ = {
 			isa = PBXGroup;
 			children = (
+				5D340E80252A4D6C00740973 /* auth */,
 				5D340E50252A048F00740973 /* TriageApp.swift */,
 				5D340E52252A048F00740973 /* ContentView.swift */,
 				5D340E54252A049000740973 /* Assets.xcassets */,
 				5D340E59252A049000740973 /* Persistence.swift */,
+				5DFC07BE253AFB6000DAEA2A /* GoogleService-Info.plist */,
 				5D340E5E252A049000740973 /* Info.plist */,
 				5D340E5B252A049000740973 /* Triage.xcdatamodeld */,
 				5D340E56252A049000740973 /* Preview Content */,
+				5DFC07C1253AFDF500DAEA2A /* FirebaseUtils.swift */,
 			);
 			path = Triage;
 			sourceTree = "<group>";
@@ -75,6 +99,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5D340E80252A4D6C00740973 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				5D340E81252A4DE100740973 /* GoogleAuthRepresentable.swift */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		E33D7244B719D0286A0AC0E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F38D2183B2BDDF2F582440E /* Pods-Triage.debug.xcconfig */,
+				D1309E02BD390D30D1084D23 /* Pods-Triage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D340E61252A049000740973 /* Build configuration list for PBXNativeTarget "Triage" */;
 			buildPhases = (
+				E08CE7C507AFF1D3BAB9F2DA /* [CP] Check Pods Manifest.lock */,
 				5D340E49252A048F00740973 /* Sources */,
 				5D340E4A252A048F00740973 /* Frameworks */,
 				5D340E4B252A048F00740973 /* Resources */,
+				54F0114A8EFDC2A20BB30415 /* [CP] Embed Pods Frameworks */,
+				EE75F8868C7F9CB93CBDD39E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,20 +178,82 @@
 			files = (
 				5D340E58252A049000740973 /* Preview Assets.xcassets in Resources */,
 				5D340E55252A049000740973 /* Assets.xcassets in Resources */,
+				5DFC07BF253AFB6000DAEA2A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54F0114A8EFDC2A20BB30415 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Triage/Pods-Triage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Triage/Pods-Triage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Triage/Pods-Triage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E08CE7C507AFF1D3BAB9F2DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Triage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE75F8868C7F9CB93CBDD39E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Triage/Pods-Triage-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Triage/Pods-Triage-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Triage/Pods-Triage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D340E49252A048F00740973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DFC07C2253AFDF500DAEA2A /* FirebaseUtils.swift in Sources */,
 				5D340E5A252A049000740973 /* Persistence.swift in Sources */,
 				5D340E53252A048F00740973 /* ContentView.swift in Sources */,
 				5D340E51252A048F00740973 /* TriageApp.swift in Sources */,
 				5D340E5D252A049000740973 /* Triage.xcdatamodeld in Sources */,
+				5D340E82252A4DE100740973 /* GoogleAuthRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +378,7 @@
 		};
 		5D340E62252A049000740973 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F38D2183B2BDDF2F582440E /* Pods-Triage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -285,7 +392,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seth.Triage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.triage.meh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,6 +401,7 @@
 		};
 		5D340E63252A049000740973 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1309E02BD390D30D1084D23 /* Pods-Triage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,7 +415,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.seth.Triage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.triage.meh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
